@@ -1,0 +1,1257 @@
+<!-- =====================================================================
+     The Stalk Market — Squarespace Code Block embed
+     Paste this entire file into a Squarespace Code Block.
+     Settings → turn "Display source" OFF.
+     ===================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ----------------------------------------------------------------------
+   The Stalk Market — Squarespace embeddable block
+   Everything is scoped under .sm-hcc so it won't collide with
+   Squarespace theme styles.
+   ---------------------------------------------------------------------- */
+
+.sm-hcc {
+  /* Stalk Market palette */
+  --sm-forest:   #0c2818;
+  --sm-forest-2: #143521;
+  --sm-cream:    #f5efe2;
+  --sm-cream-2:  #ede5d2;
+  --sm-lime:     #c8db5f;
+  --sm-lime-2:   #b6cc4d;
+  --sm-leaf:     #4ba550;
+  --sm-leaf-2:   #3b8e44;
+  --sm-clay:     #d18b4a;
+  --sm-ink:      #0a1d12;
+
+  --sm-serif: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --sm-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  font-family: var(--sm-sans);
+  color: var(--sm-ink);
+  line-height: 1.5;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: var(--sm-cream);
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Reset only within our scope */
+.sm-hcc *,
+.sm-hcc *::before,
+.sm-hcc *::after { box-sizing: border-box; }
+.sm-hcc h1, .sm-hcc h2, .sm-hcc h3, .sm-hcc h4, .sm-hcc p, .sm-hcc ul, .sm-hcc ol, .sm-hcc figure { margin: 0; padding: 0; }
+.sm-hcc ul { list-style: none; }
+.sm-hcc a { color: inherit; text-decoration: none; }
+.sm-hcc img, .sm-hcc svg { display: block; max-width: 100%; }
+.sm-hcc strong { font-weight: 600; }
+.sm-hcc em { font-style: italic; }
+
+/* Type */
+.sm-hcc .serif { font-family: var(--sm-serif); font-weight: 600; letter-spacing: -0.01em; }
+.sm-hcc .eyebrow {
+  font-family: var(--sm-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Section frame */
+.sm-hcc__wrap { width: 100%; }
+.sm-hcc__section { padding: 88px 56px; }
+.sm-hcc__inner { max-width: 1120px; margin: 0 auto; }
+
+.sm-bg-forest { background: var(--sm-forest); color: var(--sm-cream); }
+.sm-bg-cream  { background: var(--sm-cream); color: var(--sm-ink); }
+.sm-bg-lime   { background: var(--sm-lime);  color: var(--sm-forest); }
+.sm-bg-leaf   { background: var(--sm-leaf);  color: var(--sm-cream); }
+
+.sm-bg-forest .eyebrow { color: var(--sm-lime); }
+.sm-bg-lime   .eyebrow { color: var(--sm-forest); }
+.sm-bg-leaf   .eyebrow { color: var(--sm-cream); }
+.sm-bg-cream  .eyebrow { color: var(--sm-leaf); }
+
+/* ====================================================================
+   1. HERO
+   ==================================================================== */
+.sm-hero {
+  position: relative;
+  padding: 80px 56px 72px;
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(200,219,95,0.10) 0%, rgba(200,219,95,0) 60%),
+    radial-gradient(80% 60% at 0% 100%, rgba(75,165,80,0.10) 0%, rgba(75,165,80,0) 60%),
+    var(--sm-forest);
+  color: var(--sm-cream);
+  overflow: hidden;
+}
+.sm-hero__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.sm-hero__crest {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--sm-lime);
+  margin-bottom: 28px;
+}
+.sm-hero__crest .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--sm-lime); opacity: 0.6; }
+
+.sm-hero h1 {
+  font-family: var(--sm-serif);
+  font-weight: 600;
+  font-size: clamp(44px, 5.4vw, 84px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--sm-cream);
+}
+.sm-hero h1 .accent { color: var(--sm-lime); font-style: italic; font-weight: 500; }
+
+.sm-hero__lede {
+  margin-top: 40px;
+  font-size: 19px;
+  line-height: 1.55;
+  color: rgba(245,239,226,0.82);
+  max-width: 52ch;
+}
+
+.sm-hero__cta {
+  margin-top: 36px;
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+}
+.sm-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 26px;
+  border-radius: 999px;
+  font-family: var(--sm-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
+}
+.sm-btn--primary { background: var(--sm-lime); color: var(--sm-forest); }
+.sm-btn--primary:hover { background: #d4e679; transform: translateY(-1px); }
+.sm-btn--ghost   { background: transparent; color: var(--sm-cream); border-color: rgba(245,239,226,0.28); }
+.sm-btn--ghost:hover { border-color: var(--sm-lime); color: var(--sm-lime); }
+.sm-btn--dark    { background: var(--sm-forest); color: var(--sm-cream); }
+.sm-btn--dark:hover { background: var(--sm-forest-2); }
+.sm-btn .arrow { font-family: var(--sm-serif); }
+
+.sm-hero__deadline {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(245,239,226,0.58);
+}
+.sm-hero__deadline strong { color: var(--sm-lime); font-weight: 600; }
+
+/* Hero card */
+.sm-hero__card {
+  position: relative;
+  background: var(--sm-forest-2);
+  border: 1px solid rgba(200,219,95,0.18);
+  border-radius: 18px;
+  padding: 36px 34px 34px;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.5);
+}
+.sm-hero__card .stamp {
+  position: absolute; top: -18px; left: 28px;
+  background: var(--sm-lime); color: var(--sm-forest);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  font-weight: 700;
+  padding: 8px 14px; border-radius: 999px;
+  white-space: nowrap;
+}
+.sm-hero__card h3 {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: 26px; line-height: 1.15; color: var(--sm-cream);
+}
+.sm-hero__card .meta {
+  margin-top: 6px;
+  font-size: 13px; color: rgba(245,239,226,0.65);
+}
+.sm-hero__card .perks {
+  margin-top: 22px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.sm-hero__card .perk {
+  display: grid; grid-template-columns: 28px 1fr; gap: 12px;
+  align-items: flex-start;
+  padding: 14px 14px;
+  border-radius: 12px;
+  background: rgba(200,219,95,0.06);
+  border: 1px solid rgba(200,219,95,0.12);
+}
+.sm-hero__card .perk .icn { color: var(--sm-lime); }
+.sm-hero__card .perk .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sm-lime); font-weight: 600; }
+.sm-hero__card .perk .body { font-size: 14px; color: rgba(245,239,226,0.88); margin-top: 4px; }
+
+/* Logo monogram */
+.sm-logo {
+  width: 56px; height: 56px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  background: var(--sm-lime);
+  color: var(--sm-forest);
+  font-family: var(--sm-serif);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+.sm-logo::after {
+  content: ""; position: absolute; top: 6px; right: 8px;
+  width: 10px; height: 10px;
+  background: var(--sm-leaf);
+  border-radius: 0 100% 0 100%;
+  transform: rotate(35deg);
+}
+
+/* ====================================================================
+   2. OFFER STRIP
+   ==================================================================== */
+.sm-offer { background: var(--sm-cream); padding: 0 56px; }
+.sm-offer__inner {
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  transform: translateY(-44px);
+}
+.sm-offer__card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 32px 30px;
+  box-shadow: 0 24px 50px -28px rgba(12,40,24,0.32);
+  border: 1px solid rgba(12,40,24,0.06);
+  display: flex; flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.sm-offer__card::before {
+  content: ""; position: absolute; inset: auto -40px -60px auto;
+  width: 180px; height: 180px; border-radius: 50%;
+  background: radial-gradient(circle at center, var(--sm-lime) 0%, transparent 70%);
+  opacity: 0.35; pointer-events: none;
+}
+.sm-offer__num {
+  font-family: var(--sm-serif);
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--sm-forest);
+  display: flex; align-items: baseline; gap: 4px;
+}
+.sm-offer__num .pct { font-size: 44px; margin-left: 2px; }
+.sm-offer__title {
+  margin-top: 14px;
+  font-family: var(--sm-serif);
+  font-weight: 600;
+  font-size: 26px; line-height: 1.2;
+  color: var(--sm-forest);
+}
+.sm-offer__body {
+  margin-top: 10px;
+  font-size: 15px; line-height: 1.55;
+  color: #3b4a3f;
+  max-width: 40ch;
+}
+.sm-offer__tag {
+  margin-top: 22px;
+  align-self: flex-start;
+  display: inline-flex; gap: 8px; align-items: center;
+  padding: 8px 12px;
+  background: var(--sm-forest);
+  color: var(--sm-lime);
+  border-radius: 999px;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
+}
+.sm-offer__tag.alt { background: var(--sm-lime); color: var(--sm-forest); }
+
+.sm-hcc .sm-offer__deadline {
+  grid-column: 1 / -1;
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5a6961;
+  font-weight: 500;
+}
+.sm-hcc .sm-offer__deadline strong { color: var(--sm-leaf); font-weight: 700; }
+
+/* ====================================================================
+   3. WHY — problem + answer (98 / 2)
+   ==================================================================== */
+.sm-why { background: var(--sm-cream); padding: 110px 56px 110px; }
+.sm-why__inner { max-width: 1120px; margin: 0 auto; }
+
+.sm-why__lead {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+.sm-why__lead h2 {
+  font-family: var(--sm-serif);
+  font-weight: 600;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--sm-forest);
+}
+.sm-why__lead h2 em { font-style: italic; font-weight: 500; color: var(--sm-leaf); }
+.sm-why__lead p {
+  font-size: 17px; line-height: 1.6; color: #3b4a3f;
+  max-width: 52ch;
+}
+
+.sm-why__stats {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px;
+  align-items: stretch;
+}
+.sm-stat {
+  border-radius: 18px;
+  padding: 36px 32px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  min-height: 280px;
+}
+.sm-stat--leaves { background: var(--sm-clay); color: #fff; }
+.sm-stat--stays  { background: var(--sm-forest); color: var(--sm-cream); }
+.sm-stat__num {
+  font-family: var(--sm-serif); font-weight: 700;
+  font-size: 140px; line-height: 0.9; letter-spacing: -0.04em;
+}
+.sm-stat__num .pct { font-size: 64px; vertical-align: top; margin-left: 4px; }
+.sm-stat--stays .sm-stat__num { color: var(--sm-lime); }
+.sm-stat__label {
+  font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600;
+  opacity: 0.85;
+}
+.sm-stat__caption {
+  margin-top: 16px; font-size: 15px; line-height: 1.5; opacity: 0.9;
+  max-width: 30ch;
+}
+
+/* ====================================================================
+   4. HOW IT WORKS — Shares & Dividends
+   ==================================================================== */
+.sm-how { background: var(--sm-forest); color: var(--sm-cream); padding: 96px 56px; }
+.sm-how__inner { max-width: 1120px; margin: 0 auto; }
+
+.sm-how__head {
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px;
+  align-items: end; margin-bottom: 56px;
+}
+.sm-how__head h2 {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: clamp(36px, 4vw, 56px); line-height: 1.02;
+  letter-spacing: -0.02em; color: var(--sm-lime);
+}
+.sm-how__head p { font-size: 17px; line-height: 1.6; color: rgba(245,239,226,0.78); max-width: 56ch; }
+
+.sm-how__grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+}
+.sm-card {
+  background: var(--sm-forest-2);
+  border: 1px solid rgba(200,219,95,0.14);
+  border-radius: 18px;
+  padding: 30px 30px 28px;
+}
+.sm-card .pill {
+  display: inline-block;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(200,219,95,0.14); color: var(--sm-lime);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700;
+}
+.sm-card.pill--leaf .pill { background: var(--sm-leaf); color: var(--sm-cream); }
+.sm-card h3 {
+  margin-top: 14px;
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: 28px; line-height: 1.15; color: var(--sm-cream);
+}
+.sm-card ul { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.sm-card li {
+  display: grid; grid-template-columns: 14px 1fr; gap: 10px;
+  font-size: 15px; line-height: 1.5; color: rgba(245,239,226,0.88);
+}
+.sm-card li::before {
+  content: ""; display: block;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--sm-lime);
+  margin-top: 9px;
+}
+
+/* split — 72¢ vs 28¢ */
+.sm-split {
+  margin-top: 22px;
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 22px;
+  background: rgba(200,219,95,0.08);
+  border: 1px dashed rgba(200,219,95,0.3);
+  border-radius: 14px;
+  font-size: 14px; color: rgba(245,239,226,0.88);
+}
+.sm-split b { color: var(--sm-lime); font-family: var(--sm-serif); font-size: 22px; font-weight: 700; margin-right: 4px; }
+
+/* schedule strip */
+.sm-schedule {
+  margin-top: 56px;
+  display: grid; grid-template-columns: 1.1fr 2fr; gap: 32px;
+  align-items: center;
+  background: var(--sm-forest-2);
+  border: 1px solid rgba(200,219,95,0.14);
+  border-radius: 18px;
+  padding: 28px 32px;
+}
+.sm-schedule h4 {
+  font-family: var(--sm-serif); font-weight: 600; font-size: 22px; color: var(--sm-cream);
+}
+.sm-schedule .summer-pill {
+  margin-top: 8px;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--sm-lime); color: var(--sm-forest);
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700;
+}
+.sm-schedule .quarters {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.sm-schedule .qcell {
+  background: rgba(245,239,226,0.04);
+  border: 1px solid rgba(200,219,95,0.10);
+  border-radius: 10px;
+  padding: 14px 14px 12px;
+  font-size: 13px; color: rgba(245,239,226,0.7);
+  display: flex; flex-direction: column;
+  position: relative;
+}
+.sm-schedule .qcell .qn { display: block; font-family: var(--sm-serif); font-weight: 600; color: var(--sm-cream); font-size: 16px; letter-spacing: 0.06em; margin-bottom: 2px; }
+.sm-schedule .qcell .qdate { display: block; }
+.sm-schedule .qcell .qcredit {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(200,219,95,0.20);
+  display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(245,239,226,0.55); font-weight: 600;
+}
+.sm-schedule .qcell .qcredit b {
+  font-family: var(--sm-serif); font-weight: 700;
+  font-size: 18px; line-height: 1; letter-spacing: -0.01em;
+  color: var(--sm-lime);
+  text-transform: none;
+}
+.sm-schedule .qcell .qcredit.qcredit--none b { color: rgba(245,239,226,0.4); }
+.sm-schedule .qcell.active {
+  background: var(--sm-lime);
+  border-color: var(--sm-lime);
+  color: var(--sm-forest);
+}
+.sm-schedule .qcell.active .qn { color: var(--sm-forest); }
+.sm-schedule .qcell.active .qcredit {
+  border-top-color: rgba(12,40,24,0.25);
+  color: rgba(12,40,24,0.65);
+}
+.sm-schedule .qcell.active .qcredit b { color: var(--sm-forest); }
+
+/* ====================================================================
+   5. SHARE TIERS
+   ==================================================================== */
+.sm-hcc .sm-tiers { background: var(--sm-lime); padding: 96px 56px; }
+.sm-hcc .sm-tiers__inner { max-width: 1120px; margin: 0 auto; color: var(--sm-forest); }
+.sm-hcc .sm-tiers__head {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: end;
+  margin-bottom: 32px;
+}
+.sm-hcc .sm-tiers h2 {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: clamp(36px, 4vw, 56px); line-height: 1.02;
+  letter-spacing: -0.02em; color: var(--sm-forest); margin-top: 10px;
+}
+.sm-hcc .sm-tiers__lead {
+  font-size: 17px; line-height: 1.55; color: rgba(12,40,24,0.78); max-width: 56ch;
+}
+.sm-hcc .sm-tiers__tabs {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 8px; background: var(--sm-forest); border-radius: 999px;
+  width: fit-content; margin-bottom: 22px;
+}
+.sm-hcc .sm-tiers__tabs button {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px;
+  font-family: var(--sm-sans); font-size: 14px; font-weight: 600;
+  color: rgba(245,239,226,0.65); cursor: pointer; user-select: none;
+  border: 0; background: transparent;
+  transition: background .15s ease, color .15s ease;
+}
+.sm-hcc .sm-tiers__tabs button .e { font-size: 16px; }
+.sm-hcc .sm-tiers__tabs button:hover { color: var(--sm-cream); }
+.sm-hcc .sm-tiers__tabs button.is-active { background: var(--sm-lime); color: var(--sm-forest); }
+.sm-hcc .sm-tiers__meta {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  padding: 18px 22px;
+  background: var(--sm-forest); border-radius: 16px; color: var(--sm-cream);
+  margin-bottom: 22px;
+}
+.sm-hcc .sm-tiers__meta .name {
+  font-family: var(--sm-serif); font-weight: 600; font-size: 22px; line-height: 1.1;
+}
+.sm-hcc .sm-tiers__meta .label {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--sm-lime); font-weight: 600;
+}
+.sm-hcc .sm-tiers__meta .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.sm-hcc .sm-tiers__meta .filters span {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px;
+  background: rgba(200,219,95,0.12); border: 1px solid rgba(200,219,95,0.28);
+  border-radius: 999px;
+  font-size: 12px; color: var(--sm-lime); font-weight: 500;
+}
+.sm-hcc .sm-tiers__grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+}
+.sm-hcc .sm-share {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(12,40,24,0.08);
+  border-left: 4px solid var(--sm-cream-2);
+  box-shadow: 0 18px 40px -32px rgba(12,40,24,0.35);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.sm-hcc .sm-share:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px -28px rgba(12,40,24,0.42);
+}
+.sm-hcc .sm-share[data-tier="quarter"] { border-left-color: #cfe07a; }
+.sm-hcc .sm-share[data-tier="half"]    { border-left-color: var(--sm-lime); }
+.sm-hcc .sm-share[data-tier="full"]    { border-left-color: var(--sm-forest); }
+.sm-hcc .sm-share__body {
+  padding: 22px 22px 18px;
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 4px 14px;
+  align-items: start;
+}
+.sm-hcc .sm-share__icon {
+  grid-row: 1 / span 2;
+  width: 56px; height: 56px; border-radius: 14px;
+  background: #f3ede1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px; line-height: 1;
+  border: 1px solid rgba(12,40,24,0.08);
+}
+.sm-hcc .sm-share__title {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: 22px; line-height: 1.15; color: var(--sm-forest);
+  letter-spacing: -0.01em;
+}
+.sm-hcc .sm-share__price {
+  grid-column: 3; grid-row: 1;
+  font-family: var(--sm-serif); font-weight: 700;
+  font-size: 26px; line-height: 1; color: var(--sm-forest);
+  letter-spacing: -0.02em;
+  white-space: nowrap; text-align: right; margin-top: 2px;
+}
+.sm-hcc .sm-share__desc {
+  grid-column: 2 / span 1; margin-top: 6px;
+  font-size: 13.5px; line-height: 1.5; color: #5a6961;
+}
+.sm-hcc .sm-share__save {
+  grid-column: 3; grid-row: 2;
+  text-align: right; margin-top: 6px;
+  font-size: 12px; color: var(--sm-leaf-2);
+  font-weight: 600; white-space: nowrap;
+}
+.sm-hcc .sm-share__save::before { content: "↓ "; }
+.sm-hcc .sm-share__save--placeholder { visibility: hidden; }
+.sm-hcc .sm-share__specs {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(12,40,24,0.08);
+  background: linear-gradient(180deg, #fbf7ee 0%, #f7f2e5 100%);
+}
+.sm-hcc .sm-spec {
+  padding: 14px 12px; text-align: center;
+  border-right: 1px solid rgba(12,40,24,0.08);
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.sm-hcc .sm-spec:last-child { border-right: 0; }
+.sm-hcc .sm-spec__label {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #5a6961; font-weight: 600;
+}
+.sm-hcc .sm-spec__value {
+  font-family: var(--sm-serif); font-weight: 700;
+  font-size: 18px; line-height: 1; color: var(--sm-forest);
+  letter-spacing: -0.01em; white-space: nowrap;
+}
+.sm-hcc .sm-spec__value--em { color: var(--sm-leaf-2); }
+.sm-hcc .sm-spec__value--dash { color: rgba(12,40,24,0.35); font-weight: 600; }
+.sm-hcc .sm-tiers__foot {
+  margin-top: 28px; padding: 18px 22px;
+  background: rgba(255,255,255,0.45);
+  border: 1px dashed rgba(12,40,24,0.22); border-radius: 14px;
+  font-size: 14px; color: var(--sm-forest); line-height: 1.55;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.sm-hcc .sm-tiers__foot strong { color: var(--sm-forest); }
+.sm-hcc .sm-tiers__foot .star {
+  flex-shrink: 0; width: 22px; height: 22px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--sm-forest); color: var(--sm-lime);
+  border-radius: 6px; font-size: 13px;
+}
+
+/* ====================================================================
+   6. STEWARDS
+   ==================================================================== */
+.sm-stewards { background: var(--sm-forest); color: var(--sm-cream); padding: 96px 56px; }
+.sm-stewards__inner { max-width: 1120px; margin: 0 auto; }
+.sm-stewards h2 {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: clamp(36px, 4vw, 56px); line-height: 1.02;
+  letter-spacing: -0.02em; color: var(--sm-cream);
+  max-width: 18ch;
+}
+.sm-stewards__lead {
+  margin-top: 14px; max-width: 56ch;
+  font-size: 17px; line-height: 1.55; color: rgba(245,239,226,0.78);
+}
+.sm-stewards__grid {
+  margin-top: 40px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+}
+.sm-steward {
+  display: grid; grid-template-columns: 60px 1fr auto; gap: 16px; align-items: center;
+  background: var(--sm-cream);
+  color: var(--sm-forest);
+  border-radius: 14px;
+  padding: 18px 18px;
+}
+.sm-steward__mark {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #ede5d2;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--sm-serif); font-weight: 700; font-size: 22px; color: var(--sm-forest);
+  letter-spacing: -0.02em;
+  border: 1px solid rgba(12,40,24,0.08);
+}
+.sm-steward__name { font-family: var(--sm-serif); font-weight: 600; font-size: 18px; line-height: 1.15; }
+.sm-steward__note { font-size: 13px; color: #3b4a3f; margin-top: 3px; }
+.sm-steward__tag {
+  background: var(--sm-lime); color: var(--sm-forest);
+  padding: 6px 12px; border-radius: 999px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700;
+  white-space: nowrap;
+}
+.sm-stewards__note {
+  margin-top: 18px; font-style: italic; color: var(--sm-lime);
+  font-family: var(--sm-serif); font-size: 17px;
+}
+
+/* ====================================================================
+   7. FINE PRINT / FAQ
+   ==================================================================== */
+.sm-fine { background: var(--sm-cream); padding: 96px 56px; }
+.sm-fine__inner { max-width: 1120px; margin: 0 auto; }
+.sm-fine h2 {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: clamp(32px, 3.4vw, 44px); letter-spacing: -0.02em; color: var(--sm-forest);
+}
+.sm-fine__grid {
+  margin-top: 36px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px 56px;
+}
+.sm-faq__q {
+  font-family: var(--sm-serif); font-weight: 600; font-size: 19px; color: var(--sm-forest);
+}
+.sm-faq__a { font-size: 15px; line-height: 1.6; color: #3b4a3f; margin-top: 6px; }
+
+/* ====================================================================
+   8. SIGN-UP / FINAL CTA
+   ==================================================================== */
+.sm-signup {
+  background: var(--sm-forest);
+  color: var(--sm-cream);
+  padding: 96px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.sm-signup::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 50% at 80% 30%, rgba(200,219,95,0.10) 0%, transparent 70%),
+    radial-gradient(50% 60% at 10% 80%, rgba(75,165,80,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.sm-signup__inner {
+  position: relative; z-index: 1;
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center;
+}
+.sm-signup h2 {
+  font-family: var(--sm-serif); font-weight: 600;
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 1.0; letter-spacing: -0.02em;
+  color: var(--sm-cream);
+}
+.sm-signup h2 em { color: var(--sm-lime); font-style: italic; font-weight: 500; }
+.sm-signup__lead {
+  margin-top: 18px;
+  font-size: 18px; color: rgba(245,239,226,0.82);
+  max-width: 52ch;
+}
+.sm-signup__form {
+  background: var(--sm-cream);
+  color: var(--sm-forest);
+  border-radius: 20px;
+  padding: 32px 30px;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.5);
+}
+.sm-signup__form h3 {
+  font-family: var(--sm-serif); font-weight: 600; font-size: 24px; color: var(--sm-forest);
+}
+.sm-signup__form .sub { margin-top: 4px; font-size: 14px; color: #3b4a3f; }
+.sm-codes {
+  margin-top: 22px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.sm-code {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--sm-cream-2);
+  border: 1px dashed rgba(12,40,24,0.18);
+}
+.sm-code__label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sm-leaf); font-weight: 700; }
+.sm-code__value {
+  font-family: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--sm-forest);
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(12,40,24,0.12);
+}
+.sm-spots {
+  margin-top: 22px; padding-top: 18px;
+  border-top: 1px solid rgba(12,40,24,0.10);
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+}
+.sm-spots__count {
+  font-family: var(--sm-serif); font-weight: 700;
+  font-size: 36px; line-height: 1; color: var(--sm-forest);
+}
+.sm-spots__count small { font-size: 14px; font-weight: 500; color: #3b4a3f; margin-left: 6px; font-family: var(--sm-sans); }
+.sm-spots__deadline { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sm-leaf); font-weight: 600; text-align: right; }
+.sm-spots__deadline b { display: block; font-size: 16px; color: var(--sm-forest); font-family: var(--sm-serif); letter-spacing: -0.01em; text-transform: none; font-weight: 600; }
+
+.sm-signup__cta { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.sm-signup__cta .sm-btn { justify-content: center; padding: 18px 28px; font-size: 16px; }
+
+.sm-signup__foot { margin-top: 14px; font-size: 12px; color: #5a6961; text-align: center; }
+
+/* ====================================================================
+   FOOTER ROW
+   ==================================================================== */
+.sm-foot {
+  background: #07180f;
+  color: rgba(245,239,226,0.62);
+  padding: 28px 56px;
+  font-size: 13px;
+}
+.sm-foot__inner { max-width: 1120px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+.sm-foot a { color: var(--sm-lime); }
+
+/* ====================================================================
+   RESPONSIVE
+   ==================================================================== */
+@media (max-width: 900px) {
+  .sm-hcc .sm-hcc__section { padding: 64px 28px; }
+  .sm-hcc .sm-hero { padding: 56px 28px 56px; }
+  .sm-hcc .sm-hero__inner { grid-template-columns: 1fr; gap: 36px; }
+  .sm-hcc .sm-offer { padding: 0 28px; }
+  .sm-hcc .sm-offer__inner { grid-template-columns: 1fr; transform: translateY(-32px); }
+  .sm-hcc .sm-why  { padding: 72px 28px 72px; }
+  .sm-hcc .sm-why__lead { grid-template-columns: 1fr; gap: 24px; }
+  .sm-hcc .sm-why__stats { grid-template-columns: 1fr; }
+  .sm-hcc .sm-how, .sm-hcc .sm-tiers, .sm-hcc .sm-stewards, .sm-hcc .sm-signup, .sm-hcc .sm-fine { padding: 72px 28px; }
+  .sm-hcc .sm-how__head, .sm-hcc .sm-how__grid, .sm-hcc .sm-stewards__grid, .sm-hcc .sm-tiers__head, .sm-hcc .sm-tiers__grid, .sm-hcc .sm-signup__inner, .sm-hcc .sm-fine__grid {
+    grid-template-columns: 1fr;
+  }
+  .sm-hcc .sm-schedule { grid-template-columns: 1fr; }
+  .sm-hcc .sm-schedule .quarters { grid-template-columns: repeat(2, 1fr); }
+  .sm-hcc .sm-foot__inner { flex-direction: column; align-items: flex-start; }
+  .sm-hcc .sm-stat__num { font-size: 110px; }
+  /* tabs: single scrollable row instead of wrapping pill */
+  .sm-hcc .sm-tiers__tabs { width: 100%; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; border-radius: 14px; }
+  .sm-hcc .sm-tiers__tabs::-webkit-scrollbar { display: none; }
+  /* split: stack the two halves, hide the | divider */
+  .sm-hcc .sm-split { flex-direction: column; gap: 8px; }
+  .sm-hcc .sm-split > *:nth-child(2) { display: none; }
+  /* hero CTA: full-width stacked buttons */
+  .sm-hcc .sm-hero__cta { flex-direction: column; align-items: stretch; }
+  .sm-hcc .sm-hero__cta .sm-btn { justify-content: center; }
+  /* signup form: prevent overflow on narrow viewports */
+  .sm-hcc .sm-signup__form { padding: 24px 20px; }
+}
+@media (max-width: 520px) {
+  .sm-hcc .sm-hero h1 { font-size: 44px; }
+  .sm-hcc .sm-offer__num { font-size: 68px; }
+  .sm-hcc .sm-offer__num .pct { font-size: 32px; }
+  .sm-hcc .sm-steward { grid-template-columns: 48px 1fr; }
+  .sm-hcc .sm-steward__tag { grid-column: 2; justify-self: start; margin-top: 6px; }
+  .sm-hcc .sm-steward__mark { width: 48px; height: 48px; font-size: 18px; }
+  /* stat numbers: scale down further on small screens */
+  .sm-hcc .sm-stat__num { font-size: 80px; }
+  .sm-hcc .sm-stat__num .pct { font-size: 38px; }
+  /* share specs: 2×2 grid so values aren't cramped */
+  .sm-hcc .sm-share__specs { grid-template-columns: repeat(2, 1fr); }
+  .sm-hcc .sm-spec:nth-child(2) { border-right: 0; }
+  .sm-hcc .sm-spec:nth-child(3) { border-top: 1px solid rgba(12,40,24,0.08); }
+  /* reduce offer strip translateY on tiny screens */
+  .sm-hcc .sm-offer__inner { transform: translateY(-18px); }
+  /* schedule: tighten cell padding */
+  .sm-hcc .sm-schedule .qcell { padding: 10px; }
+  /* tiers tabs: tighter button padding */
+  .sm-hcc .sm-tiers__tabs button { padding: 10px 14px; font-size: 13px; }
+}
+</style>
+
+<div class="sm-hcc">
+
+  <!-- ==================== 1. HERO ==================== -->
+  <section class="sm-hero">
+    <div class="sm-hero__inner">
+      <div>
+        <div class="sm-hero__crest">
+          <span>The Stalk Market</span>
+          <span class="dot"></span>
+          <span>Summer 2026</span>
+        </div>
+
+        <h1 class="serif">Join The Stalk Market — Summer 2026 Cohort</h1>
+
+        <p class="sm-hero__lede" style="line-height: 1.5; padding: 15px">A members-only invitation to join The Stalk Market — a regenerative farm-share network rooted at Yellow Barn Farm in Boulder County.</p>
+
+        <div class="sm-hero__cta">
+          <a href="#join" class="sm-btn sm-btn--primary" style="color: rgb(43, 61, 23)">
+            Join the Summer Cohort <span class="arrow">→</span>
+          </a>
+          <a href="#how" class="sm-btn sm-btn--ghost">How it works</a>
+        </div>
+      </div>
+
+      <!-- Offer card -->
+      <div class="sm-offer__card" aria-label="Member offer">
+        <div class="sm-offer__num">25<span class="pct">%</span></div>
+        <h3 class="sm-offer__title">Back on your community contribution.</h3>
+        <p class="sm-offer__body">Your one-time contribution funds food hub growth, scholarships, and emergency funds. Sign up by June 10 and a quarter of it comes back to you as season credit.</p>
+        <span class="sm-offer__tag">Auto-applied at checkout</span>
+        <p style="margin-top:18px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5a6961; font-weight:500;">
+          <span style="color: rgb(75, 165, 80)">Offer closes June 10th &nbsp;·&nbsp; 25 spots open</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. WHY ==================== -->
+  <section class="sm-why">
+    <div class="sm-why__inner">
+      <div class="sm-why__lead" style="font-weight: 400">
+        <h2 class="serif">Only 2% of food grown in Boulder County <em>stays</em> in Boulder County.</h2>
+        <p>The Stalk Market is our answer: a closed-loop farm-share network where members invest directly in regenerative stewards, receive what they want week-to-week, and return their food scraps to feed the same land.</p>
+      </div>
+
+      <div class="sm-why__stats">
+        <div class="sm-stat sm-stat--leaves">
+          <div>
+            <div class="sm-stat__label">Leaves the county</div>
+            <div class="sm-stat__num">98<span class="pct">%</span></div>
+          </div>
+          <p class="sm-stat__caption">Most Colorado farmers earn just ¢.20 per dollar sold.</p>
+        </div>
+        <div class="sm-stat sm-stat--stays">
+          <div>
+            <div class="sm-stat__label">Stays in the county</div>
+            <div class="sm-stat__num">2<span class="pct">%</span></div>
+          </div>
+          <p class="sm-stat__caption">We're growing this number — share by share, scrap by scrap, neighbor by neighbor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. HOW IT WORKS ==================== -->
+  <section class="sm-how" id="how">
+    <div class="sm-how__inner">
+      <div class="sm-how__head">
+        <h2 class="serif">Shares &amp; Dividends</h2>
+        <p>You invest in a Share from a specific steward — a volume of meat, eggs, or produce you'll draw from all season. Each week, request dividends from your shares; we deliver to your door or a local Node, and pick up your food scraps on the way out.</p>
+      </div>
+
+      <div class="sm-how__grid">
+        <div class="sm-card">
+          <span class="pill">Share</span>
+          <h3>Your seasonal investment.</h3>
+          <ul>
+            <li>A specific volume from one steward — Mini, Quarter, Half, or Full.</li>
+            <li>Larger shares lock in a discounted per-pound price.</li>
+            <li>Stored for you; request what you want, when you want it.</li>
+          </ul>
+        </div>
+        <div class="sm-card pill--leaf">
+          <span class="pill">Dividend</span>
+          <h3>What you actually receive each week.</h3>
+          <ul>
+            <li>A smaller portion of your Share, requested Friday–Sunday.</li>
+            <li>Home delivery — or pickup at a Hub, Node, or Nook.</li>
+            <li>Food scrap collection included on delivery day.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sm-split">
+        <div><b>72¢</b>of every $1 goes directly to your stewards.</div>
+        <div style="opacity:0.5;">|</div>
+        <div><b>28¢</b>supports Yellow Barn, Picky Pig &amp; The Stalk Market.</div>
+      </div>
+
+      <!-- Schedule -->
+      <div class="sm-schedule">
+        <div>
+          <h4>Quarterly Investment Windows</h4>
+          <span class="summer-pill">Now open · Summer Cohort</span>
+        </div>
+        <div class="quarters">
+          <div class="qcell">
+            <span class="qn" style="color: rgb(117, 131, 116)">Spring</span>
+            <span class="qdate" style="color: rgb(117, 131, 116)">Mar 1–15</span>
+            <span class="qcredit qcredit--none"><b>50%</b> <span>CREDIT · 50 SPOTS</span></span>
+          </div>
+          <div class="qcell active">
+            <span class="qn">Summer</span>
+            <span class="qdate">Jun 1–15</span>
+            <span class="qcredit"><b>25%</b> <span>CREDIT · 25 SPOTS</span></span>
+          </div>
+          <div class="qcell">
+            <span class="qn">Fall</span>
+            <span class="qdate" style="color: rgb(200, 220, 95)">Sep 1–15</span>
+            <span class="qcredit"><b>15%</b> <span>CREDIT · 25 SPOTS</span></span>
+          </div>
+          <div class="qcell">
+            <span class="qn">Winter</span>
+            <span class="qdate" style="color: rgb(200, 220, 95)">Dec 1–15</span>
+            <span class="qcredit"><b>10%</b> <span>CREDIT · 25 SPOTS</span></span>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:14px; font-size:13px; letter-spacing:0.04em; color:rgba(245,239,226,0.55); text-align:left;">Credit % = the portion of your Community Contribution returned as account credit when you join in that window.</p>
+    </div>
+  </section>
+
+  <!-- ==================== 5. SHARE TIERS ==================== -->
+  <section class="sm-tiers" id="tiers">
+    <div class="sm-tiers__inner">
+      <div class="sm-tiers__head">
+        <div>
+          <span class="eyebrow">Share Sizes</span>
+          <h2 class="serif">Pick your share size.</h2>
+        </div>
+        <p class="sm-tiers__lead">Five stewards and counting. Four tier sizes each. Larger shares lock in a discounted rate — all stored for you and can be requested weekly as Dividends.</p>
+      </div>
+
+      <nav class="sm-tiers__tabs" role="tablist" aria-label="Steward category">
+        <button class="is-active" data-cat="lamb"><span class="e">🐑</span> Lamb</button>
+        <button data-cat="pork"><span class="e">🐖</span> Pork</button>
+        <button data-cat="produce"><span class="e">🥬</span> Produce</button>
+        <button data-cat="beef"><span class="e">🐄</span> Beef</button>
+        <button data-cat="eggs"><span class="e">🥚</span> Eggs</button>
+      </nav>
+
+      <div id="sm-tiers-panel"></div>
+
+      <div class="sm-tiers__foot">
+        <span class="star">★</span>
+        <div>How it works: Your Share is stored for you. Each week, request a Dividend (a smaller portion) — home-delivered or picked up at a Hub, Node, or Nook. Only request when you want it. Food-scrap collection is included on delivery day.</div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      const TIER_LABEL = { mini: "Mini", quarter: "Quarter", half: "Half", full: "Full" };
+      const CATEGORIES = [
+        {
+          id: "lamb", label: "Lamb", steward: "Ewe Betta Werk",
+          unit: "BOX", unitPl: "BOXES", rate: "$/LB",
+          filters: ["🌱 Regenerative", "🌾 Pasture-Raised", "📍 Local"],
+          tiers: [
+            { tier:"mini",    icon:"🍖", price:"$120.00", desc:"1–2 people for 2–3 meals. Lamb sampler; most common &amp; requested cuts. Cuts may vary based on availability.", units:1, lb:"6",    perLb:"$20.00" },
+            { tier:"quarter", icon:"📦", price:"$222.00", save:"Save $18",    desc:"2–4 people for 3–4 weeks. Half of a lamb.",        units:2, lb:"12.5", perLb:"$17.76", disc:"8% off" },
+            { tier:"half",    icon:"🐑", price:"$425.00", save:"Save $55",    desc:"2–4 people for 1–2 months. One full lamb worth of cuts.", units:4, lb:"25",   perLb:"$17.00", disc:"11% off" },
+            { tier:"full",    icon:"🐏", price:"$800.00", save:"Save $160",   desc:"4–6 people for 2–3 months. Two full lambs worth of cuts.", units:8, lb:"50",   perLb:"$16.00", disc:"17% off" }
+          ]
+        },
+        {
+          id: "pork", label: "Pork", steward: "Drylands Agroecology (DAR)",
+          unit: "BOX", unitPl: "BOXES", rate: "$/LB",
+          filters: ["🌱 Regenerative", "🌾 No GMO Corn/Soy", "📍 Local"],
+          tiers: [
+            { tier:"mini",    icon:"🥓", price:"$175.00",   desc:"1–2 people for 2–3 weeks. All boxes differ but usually include sausage, chops, bacon, roasts, ham, etc.", units:1, lb:"12.5", perLb:"$14.00" },
+            { tier:"quarter", icon:"📦", price:"$337.50",   save:"Save $12.50", desc:"1–2 people for 1–2 months.",                       units:2, lb:"25",   perLb:"$13.50", disc:"4% off" },
+            { tier:"half",    icon:"🐷", price:"$650.00",   save:"Save $50",    desc:"2–4 people for 2–3 months.",                       units:4, lb:"50",   perLb:"$13.00", disc:"7% off" },
+            { tier:"full",    icon:"🐖", price:"$1,200.00", save:"Save $200",   desc:"3–5 people for 4–6 months.",                       units:8, lb:"100",  perLb:"$12.00", disc:"14% off" }
+          ]
+        },
+        {
+          id: "produce", label: "Produce", steward: "Sunburn Farm",
+          unit: "BAGS", unitPl: "BAGS", rate: "$/LB",
+          filters: ["🌱 Regenerative", "🌾 No chemicals", "📍 Local"],
+          tiers: [
+            { tier:"mini",    icon:"🥦", price:"$200.00",   desc:"1–2 people for 4–5 weeks. Dividends are in 5-pound bag allotments.", units:5,  lb:"25",  perLb:"$8.00" },
+            { tier:"quarter", icon:"🧺", price:"$562.50",   save:"Save $37.50",  desc:"1–2 people for 10–12 weeks.",                    units:15, lb:"75",  perLb:"$7.50", disc:"6% off" },
+            { tier:"half",    icon:"📦", price:"$1,196.25", save:"Save $123.75", desc:"2–4 people for 16–20 weeks.",                    units:33, lb:"165", perLb:"$7.25", disc:"9% off" },
+            { tier:"full",    icon:"🥬", price:"$2,450.00", save:"Save $350",    desc:"4–6 people for 20+ weeks.",                       units:70, lb:"350", perLb:"$7.00", disc:"13% off" }
+          ]
+        },
+        {
+          id: "beef", label: "Beef", steward: "Grama Grass & Livestock",
+          unit: "BOX", unitPl: "BOXES", rate: "$/LB",
+          filters: ["🌱 Regenerative", "🌾 Grass-fed & finished", "📍 Local"],
+          tiers: [
+            { tier:"mini",    icon:"🥩", price:"$450.00",   desc:"1–2 people for 4–6 weeks. All boxes differ — usually a range of ground, 1–2 high-end cuts, 1–2 mid-tier cuts, and some lower-tier cuts.", units:1, lb:"25",  perLb:"$18.00" },
+            { tier:"quarter", icon:"📦", price:"$1,600.00", save:"Save $200",   desc:"Small household, 4–6 months.",                   units:4,  lb:"100", perLb:"$16.00", disc:"11% off" },
+            { tier:"half",    icon:"🐮", price:"$3,040.00", save:"Save $560",   desc:"Family supply, 8–12 months.",                    units:8,  lb:"200", perLb:"$15.20", disc:"16% off" },
+            { tier:"full",    icon:"🐄", price:"$5,760.00", save:"Save $1,440", desc:"Large family — a full year of beef.",            units:16, lb:"400", perLb:"$14.40", disc:"20% off" }
+          ]
+        },
+        {
+          id: "eggs", label: "Eggs", steward: "Croft Family Farm",
+          unit: "DOZEN", unitPl: "DOZEN", rate: "$/DZ",
+          filters: ["🌱 Non-GMO Feed", "🌾 Pasture-Raised", "📍 Local"],
+          tiers: [
+            { tier:"mini",    icon:"🥚", price:"$28.50",  desc:"A monthly cadence — about a dozen a week.",            units:3,  lb:null, perLb:"$9.50" },
+            { tier:"quarter", icon:"🥚", price:"$111.00", save:"Save $3",  desc:"Steady supply for a small household over a quarter.", units:12, lb:null, perLb:"$9.25", disc:"3% off" },
+            { tier:"half",    icon:"🥚", price:"$216.00", save:"Save $12", desc:"Two dozen a week for a baking-heavy kitchen.",        units:24, lb:null, perLb:"$9.00", disc:"5% off" },
+            { tier:"full",    icon:"🥚", price:"$408.00", save:"Save $48", desc:"Four dozen a week — for large families or sharing.",  units:48, lb:null, perLb:"$8.50", disc:"11% off" }
+          ]
+        }
+      ];
+
+      function shareCard(cat, t) {
+        const showLb = t.lb !== null && t.lb !== undefined;
+        return `
+          <article class="sm-share" data-tier="${t.tier}">
+            <div class="sm-share__body">
+              <div class="sm-share__icon">${t.icon}</div>
+              <h3 class="sm-share__title">${TIER_LABEL[t.tier]} Share</h3>
+              <div class="sm-share__price">${t.price}</div>
+              <p class="sm-share__desc">${t.desc}</p>
+              ${t.save
+                ? `<div class="sm-share__save">${t.save}</div>`
+                : `<div class="sm-share__save sm-share__save--placeholder">–</div>`}
+            </div>
+            <div class="sm-share__specs">
+              <div class="sm-spec">
+                <div class="sm-spec__label">${t.units > 1 ? cat.unitPl : cat.unit}</div>
+                <div class="sm-spec__value">${t.units}</div>
+              </div>
+              ${showLb ? `
+                <div class="sm-spec"><div class="sm-spec__label">LB</div><div class="sm-spec__value">${t.lb}</div></div>`
+              : `
+                <div class="sm-spec"><div class="sm-spec__label">—</div><div class="sm-spec__value sm-spec__value--dash">—</div></div>`}
+              <div class="sm-spec">
+                <div class="sm-spec__label">${cat.rate}</div>
+                <div class="sm-spec__value">${t.perLb}</div>
+              </div>
+              <div class="sm-spec">
+                <div class="sm-spec__label">DISC</div>
+                <div class="sm-spec__value ${t.disc ? 'sm-spec__value--em' : 'sm-spec__value--dash'}">${t.disc || '—'}</div>
+              </div>
+            </div>
+          </article>`;
+      }
+
+      function categoryPanel(cat) {
+        return `
+          <div class="sm-tiers__meta">
+            <div>
+              <div class="label">Steward · ${cat.label}</div>
+              <div class="name">${cat.steward}</div>
+            </div>
+            <div class="filters">${cat.filters.map(f => `<span>${f}</span>`).join("")}</div>
+          </div>
+          <div class="sm-tiers__grid">${cat.tiers.map(t => shareCard(cat, t)).join("")}</div>`;
+      }
+
+      const host = document.getElementById("sm-tiers-panel");
+      host.innerHTML = categoryPanel(CATEGORIES[0]);
+      document.querySelectorAll(".sm-tiers__tabs button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".sm-tiers__tabs button").forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          const cat = CATEGORIES.find(c => c.id === btn.dataset.cat);
+          host.innerHTML = categoryPanel(cat);
+        });
+      });
+    })();
+    </script>
+  </section>
+
+  <!-- ==================== 6. STEWARDS ==================== -->
+  <section class="sm-stewards">
+    <div class="sm-stewards__inner">
+      <span class="eyebrow">Your Food &amp; Soil</span>
+      <h2 class="serif" style="margin-top:10px;">The stewards who tend Boulder County land.</h2>
+      <p class="sm-stewards__lead">Every share comes from a known steward, with practices we've vetted in person. 3–5 new stewards join each seasonal quarter.</p>
+
+      <div class="sm-stewards__grid">
+        <div class="sm-steward">
+          <div class="sm-steward__mark">CFF</div>
+          <div>
+            <div class="sm-steward__name">Croft Family Farm</div>
+            <div class="sm-steward__note">Non-GMO, no corn/soy, regeneratively raised.</div>
+          </div>
+          <span class="sm-steward__tag">Eggs</span>
+        </div>
+        <div class="sm-steward">
+          <div class="sm-steward__mark">GGL</div>
+          <div>
+            <div class="sm-steward__name">Grama Grass &amp; Livestock</div>
+            <div class="sm-steward__note">Regenerative grazing, grass-fed &amp; finished.</div>
+          </div>
+          <span class="sm-steward__tag">Beef</span>
+        </div>
+        <div class="sm-steward">
+          <div class="sm-steward__mark">DAR</div>
+          <div>
+            <div class="sm-steward__name">Drylands Agroecology&nbsp;(DAR)</div>
+            <div class="sm-steward__note">Regenerative grazing; USDA processed.</div>
+          </div>
+          <span class="sm-steward__tag">Beef · Pork</span>
+        </div>
+        <div class="sm-steward">
+          <div class="sm-steward__mark">SBF</div>
+          <div>
+            <div class="sm-steward__name">Sunburn Farm</div>
+            <div class="sm-steward__note">No pesticides, no till, soil-first practices.</div>
+          </div>
+          <span class="sm-steward__tag">Produce</span>
+        </div>
+        <div class="sm-steward">
+          <div class="sm-steward__mark">EBW</div>
+          <div>
+            <div class="sm-steward__name">Ewe Betta Werk</div>
+            <div class="sm-steward__note">Pasture-raised lamb, grass-fed &amp; finished.</div>
+          </div>
+          <span class="sm-steward__tag">Lamb</span>
+        </div>
+        <div class="sm-steward" style="background:transparent;color:var(--sm-cream);border:1px dashed rgba(200,219,95,0.3);">
+          <div class="sm-steward__mark" style="background:transparent;color:var(--sm-lime);border-color:rgba(200,219,95,0.3);">+3</div>
+          <div>
+            <div class="sm-steward__name" style="color:var(--sm-cream);">More joining this quarter</div>
+            <div class="sm-steward__note" style="color:rgba(245,239,226,0.65);">3–5 new stewards added in every season.</div>
+          </div>
+          <span class="sm-steward__tag" style="background:transparent;color:var(--sm-lime);border:1px solid var(--sm-lime);">Soon</span>
+        </div>
+      </div>
+
+      <p class="sm-stewards__note" style="padding: 10px">Nothing wasted. Everything returned.</p>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FAQ ==================== -->
+  <section class="sm-fine">
+    <div class="sm-fine__inner">
+      <h2 class="serif">A few honest questions.</h2>
+
+      <div class="sm-fine__grid">
+        <div>
+          <div class="sm-faq__q">What exactly is the community contribution?</div>
+          <p class="sm-faq__a">A one-time payment when you join. It funds food hub growth, emergency funds for stewards, and scholarships for members who need them. All new members signing up by June 10 get 25% back as account credit.</p>
+        </div>
+        <div>
+          <div class="sm-faq__q">What happens if I travel or my kitchen is full?</div>
+          <p class="sm-faq__a">Skip a week. Your share is stored; request your dividend only when you want it.</p>
+        </div>
+        <div>
+          <div class="sm-faq__q">What about my food scraps?</div>
+          <p class="sm-faq__a">Picky Pig — our delivery partner — collects scraps on the same trip. They return to Yellow Barn to feed pigs and build compost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. SIGN-UP / FINAL CTA ==================== -->
+  <section class="sm-signup" id="join">
+    <div class="sm-signup__inner">
+      <div>
+        <span class="eyebrow" style="color:var(--sm-lime);">Summer 2026 · Boulder County</span>
+        <h2 class="serif" style="margin-top:12px;">
+          Ready to <em>diversify</em><br/>your portfolio?
+        </h2>
+        <p class="sm-signup__lead">Only 25 spots are available for the Summer 2026 cohort. Registration closes June 10th. Your 25% community contribution credit is applied the moment you join.</p>
+      </div>
+
+      <div class="sm-signup__form">
+        <h3>Claim your member spot.</h3>
+        <p class="sub">Your credit is pre-attached to your account. No action required.</p>
+
+        <div class="sm-codes">
+          <div class="sm-code">
+            <span class="sm-code__label">COMMUNITY CONTRIBUTION</span>
+            <span class="sm-code__value">25% Mrkt Credit</span>
+          </div>
+        </div>
+
+        <div class="sm-spots">
+          <div class="sm-spots__count">25<small>spots total</small></div>
+          <div class="sm-spots__deadline">
+            Registration closes
+            <b>June 10, 2026</b>
+          </div>
+        </div>
+
+        <div class="sm-signup__cta">
+          <a href="https://exchange.stalk-market.com/join" class="sm-btn sm-btn--primary">
+            Sign up for the Summer Cohort →
+          </a>
+          <a href="mailto:stalk-market@yellowbarn.farm?subject=Summer%202026%20cohort%20question" class="sm-btn sm-btn--dark" style="border: 1px solid rgba(200,219,95,0.3); color: rgb(255, 255, 255)">
+            Talk to us first
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="sm-foot">
+    <div class="sm-foot__inner">
+      <div>The Stalk Market &nbsp;·&nbsp; Yellow Barn Farm &nbsp;·&nbsp; 9417 N Foothills Hwy, Longmont, CO</div>
+      <div>Questions? <a href="mailto:stalk-market@yellowbarn.farm">stalk-market@yellowbarn.farm</a></div>
+    </div>
+  </footer>
+
+</div>

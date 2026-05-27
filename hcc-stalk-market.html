@@ -444,10 +444,9 @@
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px dashed rgba(200,219,95,0.20);
-  display: flex; align-items: baseline; gap: 6px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
   color: rgba(245,239,226,0.55); font-weight: 600;
-  flex-wrap: wrap;
 }
 .sm-schedule .qcell .qcredit b {
   font-family: var(--sm-serif); font-weight: 700;
@@ -990,22 +989,22 @@
             <span class="qn" style="color: rgb(117, 131, 116)">Spring</span>
             <span class="qdate" style="color: rgb(117, 131, 116)">Mar 1–15</span>
             <!-- Fix #4: replaced <br> with a plain text separator inside flex .qcredit -->
-            <span class="qcredit qcredit--none"><b>50%</b> <span>CREDIT · 50 SPOTS</span></span>
+            <span class="qcredit qcredit--none"><span><b>50%</b> CREDIT</span><span>50 SPOTS</span></span>
           </div>
           <div class="qcell active">
             <span class="qn">Summer</span>
             <span class="qdate">Jun 1–15</span>
-            <span class="qcredit"><b>25%</b> <span>CREDIT · 25 SPOTS</span></span>
+            <span class="qcredit"><span><b>25%</b> CREDIT</span><span>25 SPOTS</span></span>
           </div>
           <div class="qcell">
             <span class="qn">Fall</span>
             <span class="qdate" style="color: rgb(200, 220, 95)">Sep 1–15</span>
-            <span class="qcredit"><b>15%</b> <span>CREDIT · 25 SPOTS</span></span>
+            <span class="qcredit"><span><b>15%</b> CREDIT</span><span>25 SPOTS</span></span>
           </div>
           <div class="qcell">
             <span class="qn">Winter</span>
             <span class="qdate" style="color: rgb(200, 220, 95)">Dec 1–15</span>
-            <span class="qcredit"><b>10%</b> <span>CREDIT · 25 SPOTS</span></span>
+            <span class="qcredit"><span><b>10%</b> CREDIT</span><span>25 SPOTS</span></span>
           </div>
         </div>
       </div>

@@ -804,6 +804,17 @@
   .sm-hcc .sm-schedule .quarters { grid-template-columns: repeat(2, 1fr); }
   .sm-hcc .sm-foot__inner { flex-direction: column; align-items: flex-start; }
   .sm-hcc .sm-stat__num { font-size: 110px; }
+  /* tabs: single scrollable row instead of wrapping pill */
+  .sm-hcc .sm-tiers__tabs { width: 100%; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; border-radius: 14px; }
+  .sm-hcc .sm-tiers__tabs::-webkit-scrollbar { display: none; }
+  /* split: stack the two halves, hide the | divider */
+  .sm-hcc .sm-split { flex-direction: column; gap: 8px; }
+  .sm-hcc .sm-split > *:nth-child(2) { display: none; }
+  /* hero CTA: full-width stacked buttons */
+  .sm-hcc .sm-hero__cta { flex-direction: column; align-items: stretch; }
+  .sm-hcc .sm-hero__cta .sm-btn { justify-content: center; }
+  /* signup form: prevent overflow on narrow viewports */
+  .sm-hcc .sm-signup__form { padding: 24px 20px; }
 }
 @media (max-width: 520px) {
   .sm-hcc .sm-hero h1 { font-size: 44px; }
@@ -812,6 +823,19 @@
   .sm-hcc .sm-steward { grid-template-columns: 48px 1fr; }
   .sm-hcc .sm-steward__tag { grid-column: 2; justify-self: start; margin-top: 6px; }
   .sm-hcc .sm-steward__mark { width: 48px; height: 48px; font-size: 18px; }
+  /* stat numbers: scale down further on small screens */
+  .sm-hcc .sm-stat__num { font-size: 80px; }
+  .sm-hcc .sm-stat__num .pct { font-size: 38px; }
+  /* share specs: 2×2 grid so values aren't cramped */
+  .sm-hcc .sm-share__specs { grid-template-columns: repeat(2, 1fr); }
+  .sm-hcc .sm-spec:nth-child(2) { border-right: 0; }
+  .sm-hcc .sm-spec:nth-child(3) { border-top: 1px solid rgba(12,40,24,0.08); }
+  /* reduce offer strip translateY on tiny screens */
+  .sm-hcc .sm-offer__inner { transform: translateY(-18px); }
+  /* schedule: keep 2 columns but tighten padding */
+  .sm-hcc .sm-schedule .qcell { padding: 10px; }
+  /* tiers tabs: tighter button padding */
+  .sm-hcc .sm-tiers__tabs button { padding: 10px 14px; font-size: 13px; }
 }
 </style>
 
